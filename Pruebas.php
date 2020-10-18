@@ -37,6 +37,10 @@ echo '<p>Lista de Clientes:</p>';
 foreach($clientes as $cliente)
 {
         echo $cliente->getNombre().'<br />';
+        $peliculasClientes=$cliente->getProductosAlquilados();
+        foreach($peliculasClientes as $pelicula){
+            echo $pelicula->getNombre();            
+        }
 }
 
 //Obtenemos la lista de productos registrados
